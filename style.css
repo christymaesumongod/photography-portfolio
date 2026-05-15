@@ -958,7 +958,48 @@ a {
 }
 
 /* ========================================
-   TABLET LAYOUT (≤1280px)
+   DESKTOP DEFAULT (BASE STYLE)
+   ======================================== */
+
+/* GRID DEFAULT = DESKTOP */
+.collections-grid,
+.gallery-grid,
+.filtered-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* OTHER GRID DEFAULTS */
+.skills-list,
+.detail-container,
+.about-container,
+.contact-container,
+.footer-content {
+    display: grid;
+}
+
+/* TYPOGRAPHY DESKTOP */
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/* HAMBURGER OFF BY DEFAULT */
+.hamburger {
+    display: none;
+}
+
+/* NAV DEFAULT (DESKTOP) */
+.nav-menu {
+    display: flex;
+    position: static;
+}
+
+/* ========================================
+   TABLET (≤1280px)
    ======================================== */
 @media (max-width: 1280px) {
     .collections-grid,
@@ -969,20 +1010,11 @@ a {
 }
 
 /* ========================================
-   DESKTOP DEFAULT
-   ======================================== */
-
-/* HAMBURGER HIDDEN ON DESKTOP */
-.hamburger {
-    display: none;
-}
-
-/* ========================================
-   MOBILE / SMALL SCREEN (≤768px)
+   MOBILE (≤768px)
    ======================================== */
 @media (max-width: 768px) {
 
-    /* TYPOGRAPHY */
+    /* TYPOGRAPHY MOBILE ONLY */
     h1 {
         font-size: 1rem;
     }
@@ -1004,7 +1036,7 @@ a {
         padding: 0 1rem;
     }
 
-    /* STACK ALL GRIDS */
+    /* STACK GRIDS MOBILE ONLY */
     .collections-grid,
     .gallery-grid,
     .filtered-gallery,
@@ -1016,7 +1048,7 @@ a {
         grid-template-columns: 1fr;
     }
 
-    /* BUTTON FIX (TOUCH FRIENDLY + NO BLUR FEEL) */
+    /* BUTTON FIX */
     .cta-button,
     .cta-button-dark,
     .search-button,
@@ -1025,21 +1057,19 @@ a {
         min-width: 44px;
         padding: 0.75rem 1rem;
         font-size: 1rem;
-        line-height: 1.2;
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
     }
 
-    /* SHOW HAMBURGER ONLY ON MOBILE */
+    /* HAMBURGER SHOW ONLY MOBILE */
     .hamburger {
         display: block;
         font-size: 2rem;
-        color: white;
         cursor: pointer;
         z-index: 3000;
     }
 
-    /* MOBILE NAV SIDEBAR */
+    /* NAV MOBILE SIDEBAR */
     .nav-menu {
         position: fixed;
         top: 0;
@@ -1047,18 +1077,12 @@ a {
         width: 220px;
         height: 100vh;
         background: var(--primary-color);
-
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-
         padding-top: 5rem;
         padding-left: 2rem;
-
         gap: 2rem;
-
         transition: left 0.3s ease-in-out;
-
         z-index: 2000;
     }
 
@@ -1071,4 +1095,6 @@ a {
         font-size: 1.1rem;
     }
 }
+
+
 
