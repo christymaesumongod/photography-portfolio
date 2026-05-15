@@ -982,25 +982,13 @@ a {
    ======================================== */
 @media (max-width: 768px) {
 
-    /* FIX MOBILE BLUR / SCALING ISSUE */
-    html {
-        -webkit-text-size-adjust: 100%;
-        text-size-adjust: 100%;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-   @media (max-width: 768px) {
-   
       /* TYPOGRAPHY */
     h1 {
         font-size: 1rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .hero-text h2 {
