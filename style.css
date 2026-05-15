@@ -994,7 +994,7 @@ a {
 
     /* TYPOGRAPHY */
     h1 {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     h2 {
@@ -1002,13 +1002,19 @@ a {
     }
 
     .hero-text h2 {
-        font-size: 2rem;
+        font-size: 1rem;
         line-height: 1.2;
+        letter-spacing: 0.5px;
+        word-break: break-word;
+        padding: 0 1rem;
     }
 
     .hero-text p {
         font-size: 1rem;
+        padding: 0 1rem;
     }
+
+}
 
     /* STACK ALL GRIDS */
     .collections-grid,
